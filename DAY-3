@@ -1,0 +1,28 @@
+1,
+
+/* using SWITCH cases
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    switch(a)
+	    {
+	        case 1:
+	            System.out.println("CSE");
+	        break;
+	        case 2:
+	            System.out.println("ECE");
+	        break;
+	        case 3:
+	            System.out.println("EEE");
+	        break;
+	        default:
+	            System.out.println("invalid input");
+	        
+	    }
+	}
+}
+
