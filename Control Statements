@@ -1,104 +1,120 @@
-1. Positive, Negative or Zero
-Question: Write a program to check whether a number is positive, negative, or zero.
-Program:
-int n=10;
-if(n>0) System.out.println("Positive");
-else if(n<0) System.out.println("Negative");
-else System.out.println("Zero");
+1. checking the given numbers are equal or not
 
-
-
-2. Even or Odd
-Question: Check if a number is even or odd.
-Program:
-int n=7;
-if(n%2==0) System.out.println("Even");
-else System.out.println("Odd");
-
-
-
-3. Largest of Two Numbers
-Question: Find the larger of two numbers.
-Program:
-int a=20,b=15;
-if(a>b) System.out.println(a);
-else System.out.println(b);
-
-
-
-4. Largest of Three Numbers
-Question: Find the largest among three numbers.
-Program:
-int a=10,b=30,c=20;
-if(a>=b && a>=c) System.out.println(a);
-else if(b>=c) System.out.println(b);
-else System.out.println(c);
-
-
-
-5. Leap Year
-Question: Check whether a year is a leap year.
-Program:
-int year=2024;
-if((year%400==0)|| (year%4==0 && year%100!=0))
-System.out.println("Leap Year");
-else System.out.println("Not Leap Year");
-
-
-
-
-
-6. Grade Calculator
-Question: Print grade based on marks.
-Program:
-int marks=85;
-if(marks>=90) System.out.println("A");
-else if(marks>=75) System.out.println("B");
-else if(marks>=50) System.out.println("C");
-else System.out.println("Fail");
-
-
-
-
-
-7. Multiplication Table
-Question: Print table of 5 using for loop.
-Program:
-for(int i=1;i<=10;i++)
-System.out.println("5 x "+i+" = "+(5*i));
-
-
-
-
-
-8. Sum of First N Numbers
-Question: Find sum from 1 to N.
-Program:
-int n=5,sum=0;
-for(int i=1;i<=n;i++) sum+=i;
-System.out.println(sum);
-
-
-
-
-9. Reverse Numbers
-Question: Print numbers from 10 to 1.
-Program:
-for(int i=10;i>=1;i--)
-System.out.println(i);
-
-
-
-
-10. Switch Calculator
-Question: Perform +,-,*,/ using switch.
-Program:
-int a=10,b=5;
-char op='+';
-switch(op){
-case '+': System.out.println(a+b); break;
-case '-': System.out.println(a-b); break;
-case '*': System.out.println(a*b); break;
-case '/': System.out.println(a/b); break;
-default: System.out.println("Invalid");
+import java.util.*;
+public class equalornot
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    int b = obj.nextInt();
+	    if(a==b)
+		System.out.println("equal");
+		else
+		System.out.println(" not equal");
+	}
 }
+
+
+
+
+2. /*checking the given num is even or odd
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int num = obj.nextInt();
+	    if(num%2==0)
+		System.out.println(num +" the given num is even");
+		else
+		System.out.println(num +" the given num is odd");
+	}
+}
+
+
+
+3./*checking the given person age is eligible for votr or not
+*/
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int age = obj.nextInt();
+	    if(age>=18)
+		System.out.println(age +" is eligible to vote");
+		else
+		System.out.println(age +" is not eligible to vote");
+	}
+}
+
+
+
+4. /*ip 
+  9                                 divisible by3
+  11                               not divisible by3 and reminder is 2
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    if(a%3==0)
+		System.out.println(a +" is divisible by 3");
+		else
+		System.out.println(a +" not divisible by3 and reminder is 3");
+	}
+}
+
+
+
+
+
+5. /* finding the greatest number from 2 numbers
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    int b = obj.nextInt();
+	    if(a<b)
+		System.out.println(b +" is greater number");
+		else
+		System.out.println(a +" is greater number");
+	}
+}
+
+
+
+
+
+
+
+6./* finding the smallest number among 3 numbers
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    int b = obj.nextInt();
+	    int c = obj.nextInt();
+	    if(a<b&&a<c)
+		System.out.println(a +" is smallest number");
+		else if(b<a&&b<c)
+		System.out.println(b +" is smallest number");
+		else
+		System.out.println(c +" is the smallest number");
+	}
+}
+
+
+
+
+
