@@ -1,0 +1,118 @@
+1.
+/*Base pattern 1*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){
+	    int row,col;
+	    
+    for(row=0;row<6;row++){
+	    System.out.println();
+	        for(col=0;col<6;col++)
+	        System.out.print("*");}
+	   
+	}
+}
+
+
+2.
+/*Base pattern 2 */
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){
+	    int row,col;
+	    
+    for(row=0;row<6;row++){
+	    System.out.println();
+	        for(col=0;col<row;col++)
+	        System.out.print("*");}
+	   
+	}
+}
+
+
+3.
+/*Base pattern 3 (54321) */
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){
+	    int row,col;
+	    Scanner obj = new Scanner(System.in);
+	    int n=obj.nextInt();
+	    for(row=0;row<n;row++){
+	        System.out.println();
+	        for(col=0;col<n-row;col++)
+	        System.out.print("*");}
+	   
+	}
+}
+
+4.
+/**/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){
+	    int row,col;
+	    Scanner obj = new Scanner(System.in);
+	    int n=obj.nextInt();
+	    for(row=0;row<n;row++){
+	        System.out.println();
+	        for(col=0;col<row-1;col++)
+	        System.out.print(" ");
+	        for(col=0;col<n;col++)
+	        System.out.print("*");}
+	   
+	   
+	}
+}
+
+5.
+/**/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){
+	    int row,col;
+	    Scanner obj = new Scanner(System.in);
+	    int n=obj.nextInt();
+	    for(row=0;row<n;row++,System.out.println()){
+	        for(col=0;col<=row;col++)
+	        System.out.print("*");
+	        for(col=0;col<n-row-1;col++)
+	        System.out.print(" ");
+	        for(col=0;col<=row;col++)
+	        System.out.print("*");
+	    }
+	   
+	   
+	}
+}
+
+
+6.
+/**/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){
+	    int row,col;
+	    Scanner obj = new Scanner(System.in);
+	    int n=obj.nextInt();
+	    for(row=0;row<n;row++,System.out.println()){
+	        for(col=0;col<=row;col++)
+	        System.out.print("*");
+	        
+	    }
+	    for(row=0;row<n;row++,System.out.println()){
+	        for(col=0;col<n-row;col++)
+	        System.out.print("*");}
+	   
+	   
+	}
+}
+
+
+
