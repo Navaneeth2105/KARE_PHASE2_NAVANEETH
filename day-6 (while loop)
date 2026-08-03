@@ -1,0 +1,131 @@
+/*program to count the no.of digits given in  an number*/
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+    int num = obj.nextInt();
+    int c =0;
+    while(num!=0){
+        num=num/10;
+        c++;
+        }
+    System.out.println("No.of digits"+c);
+    }
+}
+
+
+/*program for reverseing a number*/
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+
+        int reverse = 0;
+
+        while (num > 0) {
+
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+
+        }
+
+        System.out.println(reverse);
+
+    }
+}
+
+
+
+
+/*program to count the odd and even digits in given number*/
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner obj = new Scanner(System.in);
+
+        int num = obj.nextInt();
+
+        int ec=0,oc=0,d;
+
+        while (num != 0) {
+
+            d = num % 10;
+            if(d/2==0)
+            ec++;
+            else
+            oc++;
+            num = num / 10;
+
+        }
+
+        System.out.println("odd digit count"+ oc);
+        System.out.println("even digit count"+ ec);
+
+    }
+}
+
+
+
+/*program to count the prime digits in given number*/
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner obj = new Scanner(System.in);
+
+        int num = obj.nextInt();
+
+        int p=0,d,n=0;
+
+        while (num != 0) {
+
+            d = num % 10;
+            if(d==2||d==3||d==5||d==7)
+            p++;
+            else
+            n++;
+            num = num / 10;
+
+        }
+
+        System.out.println("prime digit count"+ p);
+        System.out.println("digit count"+n);
+
+    }
+}
+
+
+/*palindrome program */
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner obj = new Scanner(System.in);
+
+        int num = obj.nextInt();
+
+        int temp =num,d,rev=0;
+
+        while (num != 0) {
+
+            d = num % 10;
+            rev = rev*10+d;
+            num=num/10;
+
+        }
+        if(temp!=rev)
+        System.out.println("not a palindrome program ");
+        else
+        System.out.println("palindrome program ");
+
+    }
+}
