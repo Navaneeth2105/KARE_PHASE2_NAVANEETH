@@ -129,3 +129,52 @@ public class Main {
 
     }
 }
+
+
+/*program to find that it is an harshat number or not*/
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner obj = new Scanner(System.in);
+
+        int n = obj.nextInt();
+        int d,temp=n,sum=0;
+        while(n!=0){
+            d=n%10;
+            sum=sum+d;
+            n=n/10;
+            
+        }
+        if(n%sum==0)
+        System.out.print("harshat number");
+        else
+        System.out.print("not harshat number");
+
+    }
+}
+
+
+/*program to find that it is an perfect number or not*/
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner obj = new Scanner(System.in);
+
+        int n = obj.nextInt();
+        int i,sum=0;
+        for(i=1;i<n;i++)
+            if(n%i==0)
+            sum+=1;
+            
+        
+        if(sum==n)
+        System.out.print("prefect number");
+        else
+        System.out.print("not a perfect number");
+
+    }
+}
