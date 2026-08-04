@@ -1,0 +1,119 @@
+/*Strong Number*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj  = new Scanner(System.in);
+	    
+	    int n = obj.nextInt();
+	    int temp=n,fact,sum=0,d;
+	    while(n!=0){
+	        fact=1;
+	        d=n%10;
+	        
+	        for(int i=1;i<=d;i++){
+	        
+	        fact=fact*i;
+	        }
+	        n=n/10;
+	    }
+	    if(temp==sum)
+	    System.out.println("Strong number");
+	    else
+		System.out.println("not a Strong number");
+	}
+}
+
+
+
+/*armstromg number*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj  = new Scanner(System.in);
+	    
+	    int n = obj.nextInt();
+	    int temp=n,c=0,d,sum=0;
+	    while(n!=0){
+	        d=n%10;
+	        c++;
+	        n=n/10;
+	    }
+	    n=temp;
+	    while(n!=0){
+	        d=n%10;
+	        sum=sum+(int)Math.pow(d,c);
+	        n=n/10;
+	    }
+	    if(temp==sum)
+	    System.out.println("armstromg number");
+	    else
+		System.out.println("not a armstromg number");
+	}
+}
+
+
+
+/*adam number*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj  = new Scanner(System.in);
+	    
+	    int n = obj.nextInt();
+	    int sn = n*n;
+	    int rn=0,d,ans=0;
+	    while(n!=0){
+	        d=n%10;
+	        rn=rn*10+d;
+	        n=n/10;
+	    }
+	    int srn=rn*rn;
+	    while(n!=0){
+	        d=n%10;
+	        ans = ans*10+d;
+	        srn=srn/10;
+	    }
+	    if(ans==srn)
+	    System.out.println("adam number");
+	    else
+		System.out.println("not a adam number");
+	}
+}
+
+
+/*amicable number*/
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner obj = new Scanner(System.in);
+
+        int a = obj.nextInt();
+        int b = obj.nextInt();
+
+        int sum1 = 0, sum2 = 0;
+
+        // Sum of proper divisors of a
+        for (int i = 1; i < a; i++) {
+            if (a % i == 0) {
+                sum1 = sum1 + i;
+            }
+        }
+
+        // Sum of proper divisors of b
+        for (int i = 1; i < b; i++) {
+            if (b % i == 0) {
+                sum2 = sum2 + i;
+            }
+        }
+
+        if (sum1 == b && sum2 == a)
+            System.out.println("Amicable Numbers");
+        else
+            System.out.println("Not Amicable Numbers");
+    }
+}
