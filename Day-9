@@ -1,0 +1,142 @@
+ \\
+
+Second Largest & Second Smallest Element: Find without sorting in $O(N)$ time.
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        for(int num : arr) {
+
+            // Second Largest
+            if(num > largest) {
+                secondLargest = largest;
+                largest = num;
+            }
+            else if(num > secondLargest && num != largest) {
+                secondLargest = num;
+            }
+
+            // Second Smallest
+            if(num < smallest) {
+                secondSmallest = smallest;
+                smallest = num;
+            }
+            else if(num < secondSmallest && num != smallest) {
+                secondSmallest = num;
+            }
+        }
+
+        if(secondLargest == Integer.MIN_VALUE)
+            System.out.println("Second Largest doesn't exist");
+        else
+            System.out.println("Second Largest = " + secondLargest);
+
+        if(secondSmallest == Integer.MAX_VALUE)
+            System.out.println("Second Smallest doesn't exist");
+        else
+            System.out.println("Second Smallest = " + secondSmallest);
+    }
+}
+
+
+
+\\anti clock wise rotations
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        
+        int n = obj.nextInt();
+        int arr[] = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = obj.nextInt();
+        } 
+        
+        int k = obj.nextInt();
+        k = k % n;
+        
+        int temp[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            temp[(i + k) % n] = arr[i];
+        }
+        
+        for (int i = 0; i < n; i++) {
+            System.out.print(temp[i] + " ");
+        }
+    } 
+} 
+
+\\finding the missing number in an array
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner obj = new Scanner(System.in);
+
+        int n = obj.nextInt();
+
+        int arr[] = new int[n - 1];
+
+        int sum = 0;
+
+        for(int i = 0; i < n - 1; i++) {
+            arr[i] = obj.nextInt();
+            sum += arr[i];
+        }
+
+        int expectedSum = n * (n + 1) / 2;
+
+        int missing = expectedSum - sum;
+
+        System.out.println(missing);
+    }
+}
+
+\\sum of factors with out using *
+import java.util.*;
+
+ class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+
+        int n = obj.nextInt();
+        int fact = 1;
+
+        for (int i = 2; i <= n; i++) {
+            int temp = 0;
+            int count = 0;
+
+            while (count < i) {
+                temp = temp + fact;
+                count++;
+            }
+
+            fact = temp;
+        }
+
+        System.out.println(fact);
+    }
+}
+
+
