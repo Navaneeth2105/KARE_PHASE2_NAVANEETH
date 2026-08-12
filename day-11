@@ -1,0 +1,21 @@
+/*inheritance*/
+class Father{
+    void gen2(){
+        System.out.println("Gold");
+    }
+}
+class Son extends Father{
+    void gen2(){
+        System.out.println("Diamond");
+    }
+}
+class Main{
+    public static void main (String[] args){
+        Son sc = new Son();
+        Father f = new Father();
+        f.gen2();
+        /*f.gen3();
+        sc.gen3();*/
+        sc.gen2();
+    }
+}
