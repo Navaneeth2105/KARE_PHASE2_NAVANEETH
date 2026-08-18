@@ -114,5 +114,156 @@ public class Main
 	}
 }
 
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    int row,col;
+	    
+	    for(row=0;row<n;row++,System.out.println()){
+	        for(col=0;col<n-row;col++){
+	            System.out.print(col+1);
+	        }
+	    }
+	}
+}
+
+//output
+5
+12345
+
+678910
+
+1112131415
+
+1617181920
+
+2122232425
+
+
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int row,col;
+        int count=0;
+		for(row=0; row<5; row++,System.out.println()) {
+			for(col=0; col<n; col++) {
+				count++;
+				System.out.print(count);
+				}
+		}
+	}
+}
+
+//output
+5
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+**********
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc =  new Scanner(System.in);
+		int n =sc.nextInt();
+		int row,col;
+		
+		for(row=0;row<n;row++,System.out.println()){
+		    for(col=0;col<n-row;col++)
+		        System.out.print("*");
+		    for(col=0;col<=row-1;col++)
+		        System.out.print(" ");
+		    for(col=0;col<=row-1;col++)
+		        System.out.print(" ");
+		    for(col=0;col<n-row;col++)
+		        System.out.print("*");
+		}
+		for(row=0;row<n;row++,System.out.println()){
+		    for(col=0;col<=row;col++)
+		        System.out.print("*");
+		    for(col=0;col<n-row-1;col++)
+		        System.out.print(" ");
+		    for(col=0;col<n-row-1;col++)
+		        System.out.print(" ");
+		    for(col=0;col<=row;col++)
+		        System.out.print("*");
+		}
+	}
+}
+
+//output
+5
+1
+24
+135
+2468
+13579
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int row,col;
+        int count;
+		for(row=0; row<5; row++,System.out.println()) {
+		    if(row%2==0)
+		        count=1;
+		    else
+		        count=2;
+			for(col=0; col<=row; col++) {
+				System.out.print(count);
+				count+=2;
+				}
+		}
+	}
+}
+
+//output
+5
+*   *
+ * * 
+  *  
+ * * 
+*   *
+
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int row,col;
+		for(row=0; row<n; row++,System.out.println()) {
+		    for(col=0; col<n; col++){
+		        if(row==col || row+col == n-1)
+		        System.out.print("*");
+		    else
+		        System.out.print(" ");
+		    }
+		}
+	}
+}
 
 
